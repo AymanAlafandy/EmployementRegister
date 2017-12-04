@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using EmployeeRegister.DataAccessLayer;
 using EmployeeRegister.Models;
+using EmployeeRegister.Models.ViewModels;
 
 namespace EmployeeRegister.Controllers
 {
@@ -24,6 +25,28 @@ namespace EmployeeRegister.Controllers
         public ActionResult Computer()
         {
             var model = db.Employees.Where(i => i.Department == "Computer").ToList();
+            return View(model);
+        }
+
+       
+
+        public ActionResult NetSalary(Employee salary)
+        {
+            
+
+            var model = db.Employees.Where(i => i.Salary == 50000);
+            return View(model);
+        }
+
+        public ActionResult SalaryNetCalculations()
+        {
+            List<Models.ViewModels.SalaryNetCalculations> model = new List<Models.ViewModels.SalaryNetCalculations>();
+            
+            foreach (var item in db.Employees.Where(i => i.Salary> 0))
+            {
+                
+                model.Add(new Models.ViewModels.SalaryNetCalculations(item));
+            }
             return View(model);
         }
         // GET: Employees/Details/5

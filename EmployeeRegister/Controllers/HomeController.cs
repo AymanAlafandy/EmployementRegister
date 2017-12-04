@@ -30,5 +30,14 @@ namespace EmployeeRegister.Controllers
         {
             return View();
         }
+
+        public ActionResult NetSalary()
+        {
+            return View();
+        }
+        public ActionResult SalaryNetCalculations()
+        {
+            return View();
+        }
     }
 }

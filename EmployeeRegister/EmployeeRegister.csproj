@@ -140,6 +140,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\ViewModels\SalaryNetCalculations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +185,8 @@
     <Content Include="Views\Employees\Index.cshtml" />
     <Content Include="Views\Home\Employees.cshtml" />
     <Content Include="Views\Employees\Computer.cshtml" />
+    <Content Include="Views\Employees\NetSalary.cshtml" />
+    <Content Include="Views\Employees\SalaryNetCalculations.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
